@@ -28,9 +28,9 @@ def main():
 		if os.path.exists(directory) == False:
 			# directory doesn't exist, make one
 			os.mkdir(directory)
-		block_size_list = [128, 512, 1024, 4096, 1024 * 8, 1024 * 16, 1024 * 32, 1024 * 64, 1024 * 128, 1024 * 256]
+		block_size_list = [128, 512, 1024, 4096, 1024 * 8, 1024 * 64, 1024 * 256, 1024 ** 2, 2 * 1024 ** 2]
 		# set total_bytes, just a random pick
-		total_bytes = 1024 ** 2
+		total_bytes = 10 * 1024 ** 2
 		writer = csv.DictWriter(sys.stdout, fieldnames=('block size', 'time (milliseconds)'))
 		writer.writeheader()
 
@@ -41,7 +41,6 @@ def main():
 			writer.writerow({'block size': block_size, 'time (milliseconds)': time_taken})
 			# remove file
 			os.remove(created_file)
-
 
 if __name__ == '__main__':
 	main()

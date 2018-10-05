@@ -22,8 +22,8 @@ def main():
 		sys.exit(1)
 	else:
 		filename = sys.argv[1]
-		block_size_list = [128, 512, 1024, 4096, 1024 * 8, 1024 * 16, 1024 * 32, 1024 * 64, 1024 * 128, 1024 * 256]
-		total_bytes = 1024 ** 2
+		block_size_list = [128, 512, 1024, 4096, 1024 * 8, 1024 * 64, 1024 * 256, 1024 ** 2, 2 * 1024 ** 2]
+		total_bytes = 10 * 1024 ** 2
 		writer = csv.DictWriter(sys.stdout, fieldnames=('block size', 'time (milliseconds)'))
 		writer.writeheader()
 
