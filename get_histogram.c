@@ -80,11 +80,11 @@ int main(int argc, const char* argv[]) {
 		printf("%c : %ld\n", 'A' + i, hist[i]);
 	}
 	
-	printf("BLOCK SIZE: %ld bytes\n", block_size);
+	printf("BLOCK SIZE: %d bytes\n", block_size);
 	printf("TOTAL BYTES: %ld bytes\n", filelen);
 	printf("TIME: %lu milliseconds\n", milliseconds);
 
 
 	fclose(file_ptr);
-	return 0
+	return 0;
 }
