@@ -35,7 +35,7 @@ def main():
 		writer.writeheader()
 
 		for block_size in block_size_list:
-			created_file = os.path.join(directory, './created_file_{size}_{number}'.format(size=block_size, number=i))
+			created_file = os.path.join(directory, './created_file_{size}'.format(size=block_size))
 			# get return from run_create_random_file
 			time_taken = run_create_random_file(created_file, total_bytes, block_size)
 			writer.writerow({'block size': block_size, 'time (milliseconds)': time_taken})
