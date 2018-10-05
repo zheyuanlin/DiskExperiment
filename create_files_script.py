@@ -36,7 +36,7 @@ def main():
 
 		for block_size in block_size_list:
 			# 5 files for each block size
-			for i in range(5):
+			for i in range(2):
 				created_file = os.path.join(directory, './created_file_{size}_{number}'.format(size=block_size, number=i))
 				# get return from run_create_random_file
 				time_taken = run_create_random_file(created_file, total_bytes, block_size)
