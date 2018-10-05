@@ -12,8 +12,8 @@ def run_create_random_file(filename, total_bytes, block_size):
 	executable_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), './create_random_file')
 	args = [executable_path,
 			filename, 
-			(str)total_bytes, 
-			(str)block_size]
+			str(total_bytes), 
+			str(block_size)]
 	output = subprocess.run(args, stdout=subprocess.PIPE)
 	return int(output.stdout)
 
