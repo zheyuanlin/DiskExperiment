@@ -17,7 +17,7 @@ def run_get_histogram(filename, block_size):
 	return int(time)
 
 def main():
-	if len(sys.argv != 2):
+	if len(sys.argv) != 2:
 		print('wrong number of arguments')
 		sys.exit(1)
 	else:
